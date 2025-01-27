@@ -25,3 +25,7 @@ Run the following command:
 python inference_demo.py -src [YOUR SOURCE IMAGE] -tar [YOUR DIR OF TARGET IMAGES] -save [YOUR SAVE DIR] --ib_mode [CHOICES: smooth, no_smooth]
 ```
 The results are stored in `results_[INFERENCE_DATE]` folder.
+
+```bash
+python inference_demo.py -src ./data/src/Anna-Popplewell.png -tar ./data/tar/0268.png -save outputs/ --ib_mode smooth
+```

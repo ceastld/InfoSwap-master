@@ -289,7 +289,7 @@ if __name__ == '__main__':
 
     # Define Information Bottlenecks:
     N = 10
-    _ = encoder(torch.rand(1, 3, 128, 128).to(device), cache_feats=True)
+    _ = encoder(torch.rand(1, 3, 128, 128).to(device).contiguous(), cache_feats=True)
     _readout_feats = encoder.features[:(N + 1)]  # one layer deeper than the z_attrs needed
     in_c = sum(map(lambda f: f.shape[-3], _readout_feats))
     out_c_list = [_readout_feats[i].shape[-3] for i in range(N)]
